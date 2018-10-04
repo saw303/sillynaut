@@ -20,7 +20,7 @@ public class PersonResource {
         this.personRepository = personRepository;
     }
 
-    @Get("/")
+    @Get
     public List<Person> readAll() {
         return personRepository.findAll();
     }
