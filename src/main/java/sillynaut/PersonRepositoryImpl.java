@@ -26,7 +26,7 @@ public class PersonRepositoryImpl implements PersonRepository {
     @Override
     @Transactional(readOnly = true)
     public Optional<Person> findById(@NotNull Long id) {
-        return Optional.of(entityManager.find(Person.class, id));
+        return Optional.ofNullable(entityManager.find(Person.class, id));
     }
 
     @Override
