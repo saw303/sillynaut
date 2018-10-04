@@ -3,6 +3,12 @@ jobs:
   build:
     docker:
     - image: circleci/openjdk:8-jdk
+    - image: circleci/mariadb:10.3.9-ram
+        environment:
+        - MYSQL_ROOT_PASSWORD: yoyo
+        - MYSQL_DATABASE: sillynaut
+        - MYSQL_USER: silly
+        - MYSQL_PASSWORD: naut
 
     working_directory: ~/repo
 
