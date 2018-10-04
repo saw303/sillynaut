@@ -1,0 +1,25 @@
+---
+micronaut:
+    application:
+        name: sillynaut
+    server:
+        port: 8080
+
+---
+datasources.default: {}
+---
+datasources:
+  default:
+    url: jdbc:mariadb://localhost:3306/sillynaut
+    driverClassName: org.mariadb.jdbc.Driver
+    username: silly
+    password: naut    
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: validate
+        dialect: org.hibernate.dialect.MariaDB103Dialect
+
+
